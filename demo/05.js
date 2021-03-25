@@ -4,9 +4,11 @@ import Content from "../demo/hello.md"
 
 export default function Page() {
   return (
-    <MDXProvider components={components}>
-      <Content />
-    </MDXProvider>
+    <div>
+      <center>
+        <iframe src="https://master.dev.looker.com/embed/dashboards-next/5027" width={"1000"} height={"450"} />
+      </center>
+    </div>
   )
 }
 
@@ -15,21 +17,9 @@ const components = {
 }
 
 function Wrapper({ children }) {
-  // Get the titles from all the H1s
-  const titles = React.Children.toArray(children)
-    .filter(child => child.props.mdxType === "h1")
-    .map(child => child.props.children)
-
   return (
-    <main>
-      Table of contents:
-      <ul>
-        {titles.map(title => (
-          <li>{title}</li>
-        ))}
-      </ul>
-      <hr />
+    <div style={{ }}>
       {children}
-    </main>
+    </div>
   )
 }

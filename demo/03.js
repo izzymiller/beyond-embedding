@@ -4,9 +4,8 @@ import Content from "../demo/hello.md"
 
 export default function Page() {
   return (
-    <MDXProvider components={components}>
-      <Content />
-    </MDXProvider>
+    <div>
+    </div>
   )
 }
 
@@ -16,7 +15,7 @@ const components = {
 
 function Wrapper({ children }) {
   return (
-    <div style={{ border: "12px solid purple" }}>
+    <div style={{ }}>
       {children}
     </div>
   )

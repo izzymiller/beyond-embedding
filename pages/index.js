@@ -12,7 +12,7 @@ export default function Page() {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
-        <title>The X in MDX</title>
+        <title>Beyond Embedding</title>
       </Head>
       <Content />
     </MDXProvider>

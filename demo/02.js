@@ -1,6 +1,6 @@
 import React from "react"
 import { MDXProvider } from "@mdx-js/react"
-import Content from "../demo/hello.md"
+import Content from "../demo/agenda.md"
 
 export default function Page() {
   return (
@@ -12,7 +12,7 @@ export default function Page() {
 
 const components = {
   h1: ({ children }) => (
-    <h1 style={{ border: "12px solid purple" }}>
+    <h1 style={{ padding: "12px" }}>
       {children}
     </h1>
   ),

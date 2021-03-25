@@ -4,136 +4,117 @@
   code="hello.md"
   lang="md"
   tab="demo/hello.md"
-  tabs={["demo/hello.md", "pages/hello.js"]}
+  tabs={["demo/hello.md", "demo/agenda.md"]}
 />
 
 ```srt
-0 –> 4
-Here we have a Markdown file
-4 –> 10
-Markdown has this clean syntax that
-makes you want to use it for everything
-10 –> 15.6
-And that's also why we have MDX,
-now we can put more things on Markdown
-15.6 –> 19.7
-In this talk,
-we are going to see how flexible MDX is
-19.7 –> 25
-And how to use it for any kind of content
-and any kind of layout
+
 ```
 
 ---
 
 <Video src="speaker.webm" start={25} end={39} />
-<Browser url="/hello" loadUrl="/01" zoom={0.8} />
+<Browser url="/agenda" loadUrl="/02" zoom={0.8} />
 <Editor
-  code="01.js"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
+  code="agenda.md"
+  lang="md"
+  tab="demo/agenda.md"
+  tabs={["demo/hello.md", "demo/agenda.md"]}
 />
 
 ```srt
-25 –> 29.5
-But first I need to show you how this works
-29.5 –> 34.8
-We have a small Next.js App
-that has the MDX plugin
-34.8 –> 39
-and we have a page that imports
-the markdown file
+
 ```
 
 ---
 
 <Video src="speaker.webm" start={39} end={53} />
-<Browser url="/hello" loadUrl="/01" zoom={0.8} />
+<Browser url="/simpleembed" loadUrl="/03" zoom={1} />
 <Editor
-  code="01.js"
-  focus="2,5[9:22]"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
+  code="03_display.js"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html"]}
 />
 
 ```srt
-39 -> 43.7
-The real magic happens on this import
-43.7 -> 49.5
-Here the MDX loader transforms the markdown
-into a React component
-49.5 -> 53
-And the page just renders that component
+```
+
+---
+
+<Video src="speaker.webm" start={39} end={53} />
+<Browser url="/simpleembed" loadUrl="/04" zoom={1} />
+<Editor
+  code="04_display.js"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={39} end={53} />
+<Browser url="/simpleembed" loadUrl="/05" zoom={1} />
+<Editor
+  code="05_display.js"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html"]}
+/>
+
+```srt
 ```
 
 ---
 
 <Video src="speaker.webm" start={53} end={71} />
-<Browser url="/hello" loadUrl="/02" zoom={0.8} />
+<Browser url="https://master.dev.looker.com/" loadUrl="https://master.dev.looker.com/" zoom={1} />
 <Editor
-  code="02.js"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
+  code="05_display.js"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html"]}
 />
 
 ```srt
-53 -> 59
-If we want to change what's rendered,
-we can use the MDXProvider
-59 -> 64.3
-It has a prop that let us override
-any of the default components
-64.3 -> 71
-For example, here we are adding
-a purple border to all H1s
+only the case bc we are logged into Looker in another window. This is called "Private Embedding". It takes your existing regular Looker login session and applies it to iframes.
+
+You can imagine this might be useful for a case where the users are your everyday colleagues, and you just want to embed a Look or a Dashboard into salesforce, or into some internal intranet. If we log out, see what happens.
 ```
 
 ---
 
 <Video src="speaker.webm" start={71} end={95.5} />
-<Browser url="/hello" loadUrl="/03" zoom={0.8} />
+<Browser url="/simpleembed" loadUrl="/03" zoom={1} />
 <Editor
-  code="03.js"
-  focus="13:23"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
+  code="05_display.js"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html"]}
 />
 
 ```srt
-71 -> 75.1
-A special component we can override
-is the Wrapper
-75.1 -> 79.5
-The wrapper is the component
-that wraps the content
-79.5 -> 85.6
-You can see how we're using it to add
-a border around the whole content
-85.6 -> 90
-But the cool thing about this component
-is that in the children prop
-90 -> 95.5
-we get all the content from
-the markdown file as React elements
+we get an authentication error. So this super lightweight method works alright if we're just surfacing our embeds to people that know what Looker is, but it doesn't let us actually build an app or experience around Looker.
+
 ```
 
 ---
 
 <Video src="speaker.webm" start={95.5} end={128.2} />
-<Browser url="/hello" loadUrl="/04" zoom={0.8} />
+<Browser url="/embedsdk" loadUrl="/04" zoom={0.8} />
 <Editor
   code="04.js"
   focus="14:20"
   lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
+  tab="demo/App.js"
+  tabs={["demo/simple.html", "demo/App.js"]}
 />
 
 ```srt
+so lets shake things up a bit and bring in the Looker Embed SDK to build some more robust embeds. We'll start this up inside a small React App.
 95.5 -> 100.5
 and React elements
 are just javascript objects

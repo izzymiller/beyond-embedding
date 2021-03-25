@@ -1,2 +1,2 @@
-import Page from "../demo/04"
-export default Page
+import App from "../demo/04"
+export default App
