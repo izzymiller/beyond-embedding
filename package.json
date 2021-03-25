@@ -12,6 +12,10 @@
     "@code-hike/player": "0.2.2",
     "@code-hike/scroller": "0.2.1",
     "@code-hike/sim-user": "0.2.1",
+    "@looker/components": "^1.0.0",
+    "@looker/embed-sdk": "^1.5.1",
+    "@looker/sdk": "^21.0.10",
+    "@looker/sdk-rtl": "^21.0.10",
     "@mdx-js/loader": "^1.6.11",
     "@next/mdx": "^9.4.4",
     "html-loader": "^2.1.2",
@@ -21,6 +25,7 @@
     "react-dom": "^16.13.1",
     "react-fit-to-viewport": "^0.1.1",
     "react-range": "^1.6.7",
+    "styled-components": "^5.2.1",
     "theme-ui": "0.3.1",
     "use-spring": "^0.2.3"
   },

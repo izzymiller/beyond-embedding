@@ -1,32 +1,40 @@
-import React from "react"
-import { MDXProvider } from "@mdx-js/react"
-import Content from "../demo/steps.2.mdx"
-import { ScrollytellingLayout } from "../src/scrollytelling"
+import React, {useState, useEffect} from "react"
+import { LookerEmbedSDK } from "@looker/embed-sdk";
+import { ComponentsProvider, Heading, Span } from "@looker/components";
 
-export default function Page() {
+
+export default function App() {
   return (
-    <MDXProvider components={components}>
-      <Content />
-    </MDXProvider>
-  )
+    <div id="App">
+      <ComponentsProvider>
+        <Heading>Looker Embed Demo</Heading>
+      </ComponentsProvider>
+    </div>
+  );
 }
 
-const components = {
-  wrapper: Wrapper,
-}
+function Embed() {
+  const [dashboardEmbedded, setDashboardEmbedded] = useState(false);
+  useEffect(() => {
+    createUrlAndEmbedDashboard();
+  }, []);
 
-function Wrapper({ children }) {
-  const steps = React.Children.toArray(children)
-  const stickers = steps.map((_, stepIndex) => (
-    <>
-      <div>Step</div>
-      <span>{stepIndex}</span>
-    </>
-  ))
-  return (
-    <ScrollytellingLayout
-      steps={steps}
-      stickers={stickers}
-    />
-  )
+  let createUrlAndEmbedDashboard = async () => {
+    const embed_url = await sdk.ok(
+      sdk.create_embed_url_as_me({
+        target_url: `https://dat.dev.looker.com/embed/dashboards-next/19?embed_domain=${document.location.origin}&sdk=2`
+      })
+    );
+
+    LookerEmbedSDK.init("https://dat.dev.looker.com");
+    LookerEmbedSDK.createDashboardWithUrl(embed_url.url)
+      .appendTo(document.getElementById("App"))
+      .withClassName("embeddedDashboard")
+      .build()
+      .connect()
+      .then((dashboard) => {
+        setDashboardEmbedded(true);
+      });
+  };
+  return <div id="EmbedContainer"></div>;
 }

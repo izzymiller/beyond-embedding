@@ -1,11 +1,12 @@
-import React from "react"
+<html>
+<head>
 
-export default function Page() {
-  return (
-    <div>
-      <center>
-        <span>Hi, mom!</span>
-      </center>
-    </div>
-  )
-}
+</head>
+<body>
+  <center>
+    <span>Hi, mom!</span>
+  </center>
+
+</body>
+
+</html>

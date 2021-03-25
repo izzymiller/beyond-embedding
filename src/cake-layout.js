@@ -48,7 +48,11 @@ export function CakeLayout({
   }
 
   const backwards = () => {
-    changeStep(stepIndex - 1)
+    if(stepIndex == 0) {
+      console.log("already at 0")
+    } else {
+      changeStep(stepIndex - 1)
+    }
   }
 
   const play = () => {
@@ -105,7 +109,7 @@ export function CakeLayout({
         <div className={s.grid}>
           <div className={s.div1}>
             <MiniEditor
-              style={{ height: "100%" }}
+              style={{ height: "100%"}}
               steps={editorSteps}
               progress={progress}
               backward={backward}
@@ -133,11 +137,13 @@ export function CakeLayout({
               }
             /> */}
           </Gradient>
-        </div>
-        <div className="controls">
+          <div className="controls">
           <button onClick={forwards}>Forwards</button>
           <button onClick={backwards}>Backwards</button>
+          <span style={{color:"white"}}>{stepIndex}</span>
         </div>
+        </div>
+
         <Details
           videoTime={videoTime}
           totalSeconds={totalSeconds}

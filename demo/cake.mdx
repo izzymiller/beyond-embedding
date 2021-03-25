@@ -31,7 +31,7 @@
 <Video src="speaker.webm" start={39} end={53} />
 <Browser url="/simpleembed" loadUrl="/03" zoom={1} />
 <Editor
-  code="03_display.js"
+  code="03.js"
   lang="html"
   tab="demo/simple.html"
   tabs={["demo/simple.html"]}
@@ -45,7 +45,7 @@
 <Video src="speaker.webm" start={39} end={53} />
 <Browser url="/simpleembed" loadUrl="/04" zoom={1} />
 <Editor
-  code="04_display.js"
+  code="04.js"
   lang="html"
   tab="demo/simple.html"
   tabs={["demo/simple.html"]}
@@ -59,7 +59,7 @@
 <Video src="speaker.webm" start={39} end={53} />
 <Browser url="/simpleembed" loadUrl="/05" zoom={1} />
 <Editor
-  code="05_display.js"
+  code="05.js"
   lang="html"
   tab="demo/simple.html"
   tabs={["demo/simple.html"]}
@@ -73,7 +73,7 @@
 <Video src="speaker.webm" start={53} end={71} />
 <Browser url="https://master.dev.looker.com/" loadUrl="https://master.dev.looker.com/" zoom={1} />
 <Editor
-  code="05_display.js"
+  code="05.js"
   lang="html"
   tab="demo/simple.html"
   tabs={["demo/simple.html"]}
@@ -88,195 +88,91 @@ You can imagine this might be useful for a case where the users are your everyda
 ---
 
 <Video src="speaker.webm" start={71} end={95.5} />
-<Browser url="/simpleembed" loadUrl="/03" zoom={1} />
+<Browser url="/simpleembed" loadUrl="/05" zoom={1} />
 <Editor
-  code="05_display.js"
+  code="05.js"
   lang="html"
   tab="demo/simple.html"
   tabs={["demo/simple.html"]}
 />
 
 ```srt
-we get an authentication error. So this super lightweight method works alright if we're just surfacing our embeds to people that know what Looker is, but it doesn't let us actually build an app or experience around Looker.
+we get an authentication error. So this super lightweight method
+works alright if we're just surfacing our embeds to people that know
+what Looker is, but it doesn't let us actually build an app or
+experience around Looker.
 
 ```
 
 ---
 
 <Video src="speaker.webm" start={95.5} end={128.2} />
-<Browser url="/embedsdk" loadUrl="/04" zoom={0.8} />
+<Browser url="/embedsdk" loadUrl="/06" zoom={0.8} />
 <Editor
-  code="04.js"
-  focus="14:20"
+  code="06.js"
   lang="jsx"
   tab="demo/App.js"
   tabs={["demo/simple.html", "demo/App.js"]}
 />
 
 ```srt
-so lets shake things up a bit and bring in the Looker Embed SDK to build some more robust embeds. We'll start this up inside a small React App.
-95.5 -> 100.5
-and React elements
-are just javascript objects
-100.5 -> 103.9
-Here we are rendering
-the wrapper children as JSON
-103.9 -> 106.8
-We are only showing some of the properties
-106.8 -> 110.8
-I hope you can see
-what the JSON looks like
-110.8 -> 112.3
-It's an array
-112.3 -> 117.9
-the first element is an h1,
-the second a paragraph
-117.9 -> 122
-Each element comes with an mdxType
-122 -> 128.2
-We can, and we will, use that mdxType to
-extract information about the content
+so lets shake things up a bit and bring in the Looker Embed SDK to
+build some more robust embeds. We'll start with a simple React App. If you're
+not familiar with React, it's a javascript framework that lets you easily build
+web apps and manage state. Pretty nice.
 ```
 
 ---
 
 <Video src="speaker.webm" start={128.2} end={169.7} />
-<Browser url="/hello" loadUrl="/05" zoom={0.9} />
+<Browser url="/embedsdk" loadUrl="/07" zoom={0.9} />
 <Editor
-  code="05.js"
-  focus="17:35"
+  code="07.js"
+  focus="4:5,10:11"
   lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
+  tab="demo/App.js"
+  tabs={["demo/simple.html", "demo/App.js"]}
 />
 
 ```srt
-128.2 -> 129.3
-For example
-129.3 -> 133.3
-we could get a list of all the H1s
-from the children,
-133.3 -> 138.4
-and render it as a table of contents
-This is a very simple example,
-138.4 -> 144.2
-but it shows the pattern we are going
-to use on the rest of the examples
-144.2 -> 147.1
-In all of them, we'll have two steps
-147.1 -> 151
-First, we extract some data
-from the children
-151 -> 156.4
-and then we pass that data
-to some layout component
-156.4 -> 160.4
-Keep in mind that this runs on every render
-160.4 -> 163
-In most cases,
-it isn't a performance problem
-163 -> 169.7
-but if it is, you can move it to a plugin,
-and run the transformation on build-time
+So this is a React app. We won't explain it all, but basically you've got the ability
+to write code in javascript (or typescript) and then build your HTML output in a
+sort of combo between HTML and Javascript called "JSX". This is about all you need to know.
 ```
 
 ---
 
 <Video src="speaker.webm" start={169.7} end={214} />
-<Browser url="/steps" loadUrl="/06" zoom={0.9} />
+<Browser url="/embedsdk" loadUrl="/08" zoom={0.9} />
 <Editor
-  code="steps.mdx"
-  focus="1:20"
-  lang="md"
-  tab="demo/steps.mdx"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
+  code="08.js"
+  focus="2:3,8:10"
+  lang="jsx"
+  tab="demo/App.js"
+  tabs={["demo/simple.html", "demo/App.js"]}
 />
 
 ```srt
-169.7 -> 177.4
-I usually write content that has steps
-like tutorials or any type of walkthrough
-177.4 -> 182.4
-Markdown doesn't have any specific syntax
-for grouping things in steps
-182.4 -> 188.6
-But we can use MDX to extend Markdown
-and make up our syntax
-188.6 -> 192.9
-The implementation of the Step component
-we are using here doesn't matter
-192.9 -> 196
-we are just using it for grouping elements
-196 -> 201.3
-If you are new to MDX,
-this may not be the best introduction
-201.3 -> 206.7
-MDX is typically used for embedding
-interactive components in Markdown
-206.7 -> 209.1
-But here we are taking a different approach
-209.1 -> 214
-and using it more
-as a syntax extension for markdown
+We start by bringing in Looker Components, our design system and components library.
+This generally just helps us make everything pretty :)
+You'll notice we also imported the embed-sdk. This is an SDK we provide to make it a
+lot easier to create embeds— It handles creation of and interaction with the Looker iFrames.
 ```
 
 ---
 
 <Video src="speaker.webm" start={214} end={257.8} />
-<Browser url="/steps" loadUrl="/07" zoom={0.9}>
-  <Action
-    on={230}
-    type="click"
-    selector="button"
-    offset={40}
-  />
-  <Action
-    on={232}
-    type="click"
-    selector="button"
-    offset={40}
-  />
-  <Action
-    on={234}
-    type="click"
-    selector="button"
-    offset={40}
-  />
-</Browser>
+<Browser url="/embedsdk" loadUrl="/09" zoom={0.9} />
 <Editor
-  code="07.js"
-  focus="17:28"
+  code="09.js"
+  focus="16:40"
   lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
+  tab="demo/App.js"
+  tabs={["demo/simple.html", "demo/App.js"]}
 />
 
 ```srt
-214 -> 219.5
-Now, based on the MDX file that has steps,
-we can write another Wrapper component
-219.5 -> 224.2
-In this case, the children prop will be
-an array of Step elements
-224.2 -> 229
-So we can keep track of
-what step we are showing using React state
-229 -> 235
-and let the user change the current step
-by clicking a button
-235 -> 241.5
-Ok, now I want to show the same content
-but with a different layout
-241.5 -> 248.5
-There's a technique called scrollytelling,
-you may have seen it on some websites
-248.5 -> 253.5
-as the user scrolls down there's some
-part of the layout that sticks to the screen
-253.5 -> 256.4
-while the rest is scrolled away
-256.4 -> 257.8
-Let's do that
+We'll create a React component called "Embed" that wraps a simple Embed SDK initialization.
 ```
 
 ---

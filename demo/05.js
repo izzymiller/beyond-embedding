@@ -1,25 +1,12 @@
-import React from "react"
-import { MDXProvider } from "@mdx-js/react"
-import Content from "../demo/hello.md"
+<html>
+<head>
 
-export default function Page() {
-  return (
-    <div>
-      <center>
-        <iframe src="https://master.dev.looker.com/embed/dashboards-next/5027" width={"1000"} height={"450"} />
-      </center>
-    </div>
-  )
-}
+</head>
+<body>
+  <center>
+    <iframe src="https://master.dev.looker.com/embed/dashboards-next/5027" width={"1000"} height={"450"} />
+  </center>
 
-const components = {
-  wrapper: Wrapper,
-}
+</body>
 
-function Wrapper({ children }) {
-  return (
-    <div style={{ }}>
-      {children}
-    </div>
-  )
-}
+</html>

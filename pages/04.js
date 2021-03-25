@@ -1,2 +1,11 @@
-import App from "../demo/04"
-export default App
+import React from "react"
+
+export default function Page() {
+  return (
+    <div>
+      <center>
+        <span>Hi, mom!</span>
+      </center>
+    </div>
+  )
+}
