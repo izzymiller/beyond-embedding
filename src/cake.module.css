@@ -1,0 +1,67 @@
+.page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  /* background-image: url(/bg.svg); */
+
+  background-size: 1018px;
+  background-position: center;
+}
+
+.page :global(.ch-frame) {
+  box-shadow: none;
+  border: 0.7px solid rgb(56, 56, 56);
+}
+
+.main {
+  width: 1024px;
+  height: 576px;
+  /* width: 960px;
+  height: 540px; */
+  /* background: white; */
+  /* outline: 1px solid red; */
+}
+.grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 580px 1fr;
+  grid-template-rows: 253.36px 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.div1 :global(.ch-frame-content) {
+  background: #1e1e1e;
+}
+
+.captions {
+  color: #ddd;
+  /* background-color: #222; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Ubuntu, Droid Sans, -apple-system,
+    BlinkMacSystemFont, Segoe WPC, Segoe UI, sans-serif;
+  padding: 0 16px;
+  margin: 0;
+  z-index: 1;
+  flex: 1;
+  white-space: pre;
+}

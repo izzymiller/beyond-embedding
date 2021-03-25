@@ -1,0 +1,30 @@
+{
+  "name": "beyond-embedding",
+  "version": "2021.03.24",
+  "author": {
+    "name": "Izzy Miller"
+  },
+  "homepage": "https://looker.com",
+  "dependencies": {
+    "@code-hike/mini-browser": "0.2.1",
+    "@code-hike/mini-editor": "0.2.1",
+    "@code-hike/mini-terminal": "0.2.1",
+    "@code-hike/player": "0.2.2",
+    "@code-hike/scroller": "0.2.1",
+    "@code-hike/sim-user": "0.2.1",
+    "@mdx-js/loader": "^1.6.11",
+    "@next/mdx": "^9.4.4",
+    "next": "^9.4.4",
+    "raw-loader": "^4.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-fit-to-viewport": "^0.1.1",
+    "react-range": "^1.6.7",
+    "theme-ui": "0.3.1",
+    "use-spring": "^0.2.3"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build && next export"
+  }
+}
