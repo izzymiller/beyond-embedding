@@ -177,85 +177,84 @@ and any kind of layout
 <Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
 <Editor
   code="10.js"
-  focus="4,12"
+  focus="4,13"
   lang="jsx"
   tab="demo/embed-sdk.js"
   tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
 />
 
 ```srt
-309 -> 311.5
-Now, doing some array transformations
-311.5 -> 315.7
-We extract the list of steps
-and the list of stickers
-315.7 -> 320
-and then pass them
-to the same Layout component
 ```
 
 ---
 
-<Video src="speaker.webm" start={323} end={335} />
-<Browser url="/steps" loadUrl="/10" zoom={0.6}>
-  <Action on={326} type="scroll" selector="#step-1" />
-  <Action on={328.5} type="scroll" selector="#step-2" />
-  <Action on={331} type="scroll" selector="#step-3" />
-  <Action on={333.5} type="scroll" selector="#step-0" />
-</Browser>
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
 <Editor
-  code="10.js"
-  focus="18:32"
+  code="09.js"
   lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
 />
 
 ```srt
-323 -> 325
-So now the code on the right
-325 -> 335
-should change as the user scrolls
-to a different step
 ```
 
 ---
 
-<Video src="speaker.webm" start={335} end={367} />
-<Browser url="/steps" loadUrl="/11" zoom={0.6}>
-  <Action on={345} type="scroll" selector="#step-1" />
-  <Action on={347} type="scroll" selector="#step-2" />
-  <Action on={349} type="scroll" selector="#step-3" />
-  <Action on={351} type="scroll" selector="#step-0" />
-</Browser>
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Editor
+  code="09.js"
+  focus="32:41"
+  lang="jsx"
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
 <Editor
   code="11.js"
-  focus="19,26:38"
+  focus="21"
   lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
 />
 
 ```srt
-335 -> 342
-Just for fun, I have a Terminal component
-that animates code transitions
-342 -> 347
-so we can use it for the stickers
-and let it handle the step changes
-350.8 -> 355
-For the next example, let's add some media
-355 -> 358.4
-Instead of changing the steps
-using the scroll
-358.4 -> 363.2
-we can synchronize the steps with something
-like a video or an audio,
-363.2 -> 367
-and change the steps as the media progress
 ```
 
 ---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Editor
+  code="12.js"
+  focus="30:47"
+  lang="jsx"
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/02" zoom={0.6}></Browser>
+<Editor
+  code="agenda.md"
+  lang="md"
+  tab="demo/agenda.md"
+  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js", "demo/agenda.md"]}
+/>
 
 <Video src="speaker.webm" start={367} end={377} />
 <Browser url="/steps" loadUrl="/11" zoom={0.6} />

@@ -26,4 +26,23 @@ function Embed() {
         setDashboardEmbedded(true);
       });
   };
+
+  const handleClick = (event) => {
+    //
+    if (event.label === "Install Scenarios") {
+      setIsOpen(true);
+      return { cancel: true };
+    } else {
+      return { cancel: false };
+    }
+  };
+  return (
+    <div id="EmbedContainer">
+      <Dialog
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        content="My neat dialog"
+      />
+    </div>
+  );
 }
