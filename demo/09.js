@@ -13,6 +13,7 @@ export default function App() {
   );
 }
 
+
 function Embed() {
   const [dashboardEmbedded, setDashboardEmbedded] = useState(false);
   useEffect(() => {
@@ -22,7 +23,9 @@ function Embed() {
   let createUrlAndEmbedDashboard = async () => {
     const embed_url = await sdk.ok(
       sdk.create_embed_url_as_me({
-        target_url: `https://dat.dev.looker.com/embed/dashboards-next/19?embed_domain=${document.location.origin}&sdk=2`
+        target_url: `https://dat.dev.looker.com/embed/dashboards-next/19
+        ?embed_domain=${document.location.origin}
+        &sdk=2`
       })
     );
 

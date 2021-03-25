@@ -1,32 +1,18 @@
-import React, { Children } from "react"
-import { MDXProvider } from "@mdx-js/react"
-import Content from "../demo/steps.2.mdx"
-import { ScrollytellingLayout } from "../src/scrollytelling"
+import React, {useState, useEffect} from "react"
+import { LookerEmbedSDK } from "@looker/embed-sdk";
+import { ComponentsProvider, Heading, Span, Box } from "@looker/components";
+import { Embed } from "./embed"
 
-export default function Page() {
+
+export default function App() {
   return (
-    <MDXProvider components={components}>
-      <Content />
-    </MDXProvider>
-  )
-}
-
-const components = {
-  wrapper: Wrapper,
-}
-
-function Wrapper({ children }) {
-  const steps = Children.toArray(children).map(child => {
-    return Children.toArray(child.props.children).slice(1)
-  })
-  const stickers = Children.map(children, child => {
-    return Children.toArray(child.props.children)[0]
-  })
-
-  return (
-    <ScrollytellingLayout
-      steps={steps}
-      stickers={stickers}
-    />
-  )
+    <div id="App">
+      <ComponentsProvider>
+        <Heading>Looker Embed Demo</Heading>
+        <Box >
+          <Embed width="400px" height="400px"/>
+        </Box>
+      </ComponentsProvider>
+    </div>
+  );
 }

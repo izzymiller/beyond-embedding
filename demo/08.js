@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { LookerEmbedSDK } from "@looker/embed-sdk";
 import { ComponentsProvider, Heading, Span } from "@looker/components";
 
