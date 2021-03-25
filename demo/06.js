@@ -1,19 +1,9 @@
 import React from "react"
-import { MDXProvider } from "@mdx-js/react"
-import Content from "../demo/steps.mdx"
 
-export default function Page() {
+export default function App() {
   return (
-    <MDXProvider components={components}>
-      <Content />
-    </MDXProvider>
-  )
-}
-
-const components = {
-  wrapper: Wrapper,
-}
-
-function Wrapper({ children }) {
-  return children
+    <div id="App">
+      This is a React App. Hi, Mom!
+    </div>
+  );
 }

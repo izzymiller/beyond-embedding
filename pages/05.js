@@ -1,2 +1,9 @@
-import Page from "../demo/05"
-export default Page
+import React from "react"
+
+export default function Page() {
+  return (
+    <div>
+        <iframe src="https://master.dev.looker.com/embed/dashboards-next/5027" width={"1000"} height={"450"} />
+    </div>
+  )
+}

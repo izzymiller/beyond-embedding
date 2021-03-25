@@ -1,2 +1,8 @@
-import Page from "../demo/03"
-export default Page
+import React from "react"
+
+export default function Page() {
+  return (
+    <div>
+    </div>
+  )
+}

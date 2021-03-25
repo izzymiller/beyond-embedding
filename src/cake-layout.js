@@ -43,6 +43,18 @@ export function CakeLayout({
     videoTime
   )
 
+  const forwards = () => {
+    changeStep(stepIndex + 1)
+  }
+
+  const backwards = () => {
+    if(stepIndex == 0) {
+      console.log("already at 0")
+    } else {
+      changeStep(stepIndex - 1)
+    }
+  }
+
   const play = () => {
     playerRef.current.play()
     setIsPlaying(true)
@@ -125,6 +137,13 @@ export function CakeLayout({
               }
             />
           </Gradient>
+          <div className="controls">
+          <button onClick={forwards}>Forwards</button>
+          <button onClick={backwards}>Backwards</button>
+          <button onClick={pause}>Pause</button>
+          <button onClick={play}>Play</button>
+          <span style={{color:"white"}}>{stepIndex}</span>
+        </div>
         </div>
         <Details
           videoTime={videoTime}
