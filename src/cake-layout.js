@@ -16,6 +16,7 @@ export function CakeLayout({
   editorSteps,
   captionSteps,
 }) {
+
   const [stepIndex, changeStep] = React.useState(0)
   const playerRef = React.useRef()
   const browserRef = React.useRef()

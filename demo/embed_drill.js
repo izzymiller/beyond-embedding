@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { LookerEmbedSDK } from "@looker/embed-sdk";
-import {InputDateRange} from "@looker/components"
+import { Dialog} from "@looker/components"
 import { SDK } from "./pblsession";
 
 
@@ -12,6 +12,8 @@ let sdk = SDK({ base_url, token_endpoint });
 
 export function Embed() {
     const [dashboardEmbedded, setDashboardEmbedded] = useState(false);
+    const [isOpen, setIsOpen] = useState(false); //
+
     useEffect(() => {
       createUrlAndEmbedDashboard();
     }, []);
@@ -26,6 +28,7 @@ export function Embed() {
       LookerEmbedSDK.init("https://dat.dev.looker.com");
       LookerEmbedSDK.createDashboardWithUrl(embed_url.url)
         .appendTo(document.getElementById("App"))
+        .on("drillmenu:click", handleClick)
         .withClassName("embeddedDashboard")
         .build()
         .connect()
@@ -33,9 +36,22 @@ export function Embed() {
           setDashboardEmbedded(true);
         });
     };
+
+    const handleClick = (event) => {
+      if (event.label === "Install Scenarios") {
+        setIsOpen(true);
+        return { cancel: true };
+      } else {
+        return { cancel: false };
+      }
+    };
     return (
       <div id="EmbedContainer">
-      {/* <InputDateRange /> */}
-    </div>
+        <Dialog
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          content="My neat dialog"
+        />
+      </div>
     );
   }

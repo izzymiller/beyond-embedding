@@ -14,8 +14,9 @@
     "@code-hike/player": "0.2.2",
     "@code-hike/scroller": "0.2.1",
     "@code-hike/sim-user": "0.2.1",
-    "@looker/components": "^1.0.0",
+    "@looker/components": "^0.15.1",
     "@looker/embed-sdk": "^1.5.1",
+    "@looker/extension-sdk-react": "^21.4.0",
     "@looker/sdk": "^21.0.10",
     "@looker/sdk-rtl": "^21.0.10",
     "@mdx-js/loader": "^1.6.11",
@@ -32,6 +33,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build && next export"
+    "build": "next build && next export",
+    "start": "next start"
   }
 }

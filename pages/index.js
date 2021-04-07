@@ -1,10 +1,20 @@
-import React, { Children } from "react"
+import React, { Children, useEffect } from "react"
 import { MDXProvider } from "@mdx-js/react"
 import Content from "../demo/cake.mdx"
 import { CakeLayout } from "../src/cake-layout"
 import Head from "next/head"
 
 export default function Page() {
+
+
+  useEffect(() => {
+    if(document.querySelector('iframe').contentDocument.getElementsByClassName('embeddedDashboard').length > 0) {
+    document.querySelector('iframe').contentDocument.getElementsByClassName('embeddedDashboard')[0].style.width = "800px"
+    console.log(document.querySelector('iframe').contentDocument.getElementsByClassName('embeddedDashboard')[0])
+  }
+},[])
+
+
   return (
     <MDXProvider components={components}>
       <Head>
@@ -12,7 +22,7 @@ export default function Page() {
           name="viewport"
           content="width=device-width, initial-scale=1"
         />
-        <title>The X in MDX</title>
+        <title>Beyond Embedding</title>
       </Head>
       <Content />
     </MDXProvider>

@@ -4,6 +4,4 @@
 
 ## 2) Capturing Events
 
-## 3) Custom Filters
-
-## 4) External Toggles
+## 3) Custom Filters / External Inputs

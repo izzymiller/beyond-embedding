@@ -1,4 +1,4 @@
-<Video src="speaker.webm" start={1} end={25} />
+<Video src="draft1.mp4" start={1} end={25} />
 <Browser url="/hello" loadUrl="/01" zoom={0.8} />
 <Editor
   code="hello.md"
@@ -8,25 +8,11 @@
 />
 
 ```srt
-0 –> 4
-Here we have a Markdown file
-4 –> 10
-Markdown has this clean syntax that
-makes you want to use it for everything
-10 –> 15.6
-And that's also why we have MDX,
-now we can put more things on Markdown
-15.6 –> 19.7
-In this talk,
-we are going to see how flexible MDX is
-19.7 –> 25
-And how to use it for any kind of content
-and any kind of layout
 ```
 
 ---
 
-<Video src="speaker.webm" start={25} end={39} />
+<Video src="draft1.mp4" start={25} end={40} />
 <Browser url="/agenda" loadUrl="/02" zoom={0.8} />
 <Editor
   code="agenda.md"
@@ -44,13 +30,13 @@ and any kind of layout
 
 ---
 
-<Video src="speaker.webm" start={39} end={53} />
+<Video src="zshzort.webm" start={114} end={121} />
 <Browser url="/hello" loadUrl="/03" zoom={0.8} />
 <Editor
   code="03.js"
   lang="html"
   tab="demo/simple.html"
-  tabs={["demo/simple.html", "demo/embed-sdk.js"]}
+  tabs={["demo/simple.html"]}
 />
 
 ```srt
@@ -58,13 +44,13 @@ and any kind of layout
 
 ---
 
-<Video src="speaker.webm" start={53} end={71} />
+<Video src="speaker.webm" start={122} end={173} />
 <Browser url="/hello" loadUrl="/04" zoom={0.8} />
 <Editor
   code="04.js"
   lang="html"
   tab="demo/simple.html"
-  tabs={["demo/simple.html", "demo/embed-sdk.js"]}
+  tabs={["demo/simple.html"]}
 />
 
 ```srt
@@ -73,13 +59,13 @@ and any kind of layout
 
 ---
 
-<Video src="speaker.webm" start={71} end={95.5} />
-<Browser url="/hello" loadUrl="/05" zoom={0.8} />
+<Video src="speaker.webm" start={174} end={193} />
+<Browser url="/hello" loadUrl="/05" zoom={0.35} />
 <Editor
   code="05.js"
   lang="html"
   tab="demo/simple.html"
-  tabs={["demo/simple.html", "demo/embed-sdk.js"]}
+  tabs={["demo/simple.html"]}
 />
 
 ```srt
@@ -87,13 +73,13 @@ and any kind of layout
 
 ---
 
-<Video src="speaker.webm" start={71} end={95.5} />
-<Browser url="https://master.dev.looker.com" loadUrl="https://master.dev.looker.com" zoom={0.8} />
+<Video src="speaker.webm" start={194} end={240} />
+<Browser url="https://master.dev.looker.com" loadUrl="https://master.dev.looker.com" zoom={0.3} />
 <Editor
   code="05.js"
   lang="html"
   tab="demo/simple.html"
-  tabs={["demo/simple.html", "demo/embed-sdk.js"]}
+  tabs={["demo/simple.html"]}
 />
 
 ```srt
@@ -101,13 +87,57 @@ and any kind of layout
 
 ---
 
-<Video src="speaker.webm" start={71} end={95.5} />
-<Browser url="/hello" loadUrl="/05" zoom={0.8} />
+<Video src="speaker.webm" start={241} end={260} />
+<Browser url="/simple" loadUrl="/05" zoom={0.35} />
 <Editor
   code="05.js"
   lang="html"
   tab="demo/simple.html"
-  tabs={["demo/simple.html", "demo/embed-sdk.js"]}
+  tabs={["demo/simple.html"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={241} end={260} />
+<Browser url="/embed" loadUrl="/ssoembed" zoom={0.35} />
+<Editor
+  code="ssoembed.js"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={241} end={260} />
+<Browser url="/embed" loadUrl="/ssoembed" zoom={0.35} />
+<Editor
+  code="ssoembed.js"
+  focus="7"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={241} end={260} />
+<Browser url="/embed" loadUrl="/ssoembed" zoom={0.35} />
+<Editor
+  code="ssoembed.js"
+  focus="16"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html"]}
 />
 
 ```srt
@@ -120,8 +150,8 @@ and any kind of layout
 <Editor
   code="06.js"
   lang="jsx"
-  tab="demo/embed-sdk.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js"]}
+  tab="demo/embed-app.js"
+  tabs={["demo/simple.html", "demo/embed-app.js"]}
 />
 
 ```srt
@@ -135,8 +165,8 @@ and any kind of layout
   code="07.js"
   focus="4:5,10:11"
   lang="jsx"
-  tab="demo/embed-sdk.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js"]}
+  tab="demo/embed-app.js"
+  tabs={["demo/simple.html", "demo/embed-app.js"]}
 />
 
 ```srt
@@ -145,12 +175,12 @@ and any kind of layout
 ---
 
 <Video src="speaker.webm" start={257.8} end={292.5} />
-<Browser url="/steps" loadUrl="/08" zoom={0.9} />
+<Browser url="/steps" loadUrl="/08" zoom={0.6} />
 <Editor
   code="08.js"
   lang="jsx"
-  tab="demo/embed-sdk.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js"]}
+  tab="demo/embed-app.js"
+  tabs={["demo/simple.html", "demo/embed-app.js"]}
 />
 
 ```srt
@@ -162,10 +192,39 @@ and any kind of layout
 <Browser url="/steps" loadUrl="/09" zoom={0.6} />
 <Editor
   code="09.js"
-  focus="17:43"
   lang="jsx"
   tab="demo/embed.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={292.5} end={309} />
+<Browser url="/steps" loadUrl="/09" zoom={0.6} />
+<Editor
+  code="09.js"
+  focus="10:17"
+  lang="jsx"
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={292.5} end={309} />
+<Browser url="/steps" loadUrl="/09" zoom={0.6} />
+<Editor
+  code="09.js"
+  focus="19:27"
+  lang="jsx"
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
 />
 
 ```srt
@@ -174,13 +233,27 @@ and any kind of layout
 ---
 
 <Video src="speaker.webm" start={309} end={320} />
-<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Browser url="/steps" loadUrl="/09" zoom={0.35} />
+<Editor
+  code="08.js"
+  lang="jsx"
+  tab="demo/embed-app.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/10" zoom={0.35} />
 <Editor
   code="10.js"
-  focus="4,13"
+  focus="4,12:14"
   lang="jsx"
-  tab="demo/embed-sdk.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
+  tab="demo/embed-app.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
 />
 
 ```srt
@@ -189,12 +262,12 @@ and any kind of layout
 ---
 
 <Video src="speaker.webm" start={309} end={320} />
-<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Browser url="/steps" loadUrl="/10" zoom={0.35}></Browser>
 <Editor
   code="09.js"
   lang="jsx"
   tab="demo/embed.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
 />
 
 ```srt
@@ -203,13 +276,13 @@ and any kind of layout
 ---
 
 <Video src="speaker.webm" start={309} end={320} />
-<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Browser url="/steps" loadUrl="/10" zoom={0.35}></Browser>
 <Editor
   code="09.js"
-  focus="32:41"
+  focus="19:28"
   lang="jsx"
   tab="demo/embed.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
 />
 
 ```srt
@@ -218,13 +291,13 @@ and any kind of layout
 ---
 
 <Video src="speaker.webm" start={309} end={320} />
-<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Browser url="/steps" loadUrl="/10" zoom={0.35}></Browser>
 <Editor
   code="11.js"
-  focus="21"
+  focus="23"
   lang="jsx"
   tab="demo/embed.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
 />
 
 ```srt
@@ -233,13 +306,13 @@ and any kind of layout
 ---
 
 <Video src="speaker.webm" start={309} end={320} />
-<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Browser url="/steps" loadUrl="/10" zoom={0.35}></Browser>
 <Editor
   code="12.js"
-  focus="30:47"
+  focus="24,33:49"
   lang="jsx"
   tab="demo/embed.js"
-  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js"]}
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
 />
 
 ```srt
@@ -248,127 +321,111 @@ and any kind of layout
 ---
 
 <Video src="speaker.webm" start={309} end={320} />
-<Browser url="/steps" loadUrl="/02" zoom={0.6}></Browser>
-<Editor
-  code="agenda.md"
-  lang="md"
-  tab="demo/agenda.md"
-  tabs={["demo/simple.html", "demo/embed-sdk.js", "demo/embed.js", "demo/agenda.md"]}
-/>
-
-<Video src="speaker.webm" start={367} end={377} />
-<Browser url="/steps" loadUrl="/11" zoom={0.6} />
-<Editor
-  code="steps.3.mdx"
-  focus="3,17,19,30"
-  lang="md"
-  tab="demo/steps.mdx"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
-
-```srt
-367 -> 370.5
-To do that,
-we'll change the MDX
-370.5 -> 377
-we need to specify the media file
-and the time range for each step
-```
-
----
-
-<Video src="speaker.webm" start={377} end={406.9} />
-<Browser url="/steps" loadUrl="/13" zoom={0.6} />
+<Browser url="/steps" loadUrl="/13" zoom={0.35}></Browser>
 <Editor
   code="13.js"
-  focus="18,28:40"
   lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
+  tab="demo/embed-app.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
 />
 
 ```srt
-377 -> 381.7
-Once we have that, we can extract it
-from the children on the Wrapper
-381.7 -> 384.5
-and pass it to another React component
-384.5 -> 390.3
-this time is the TalkLayout component,
-that will solve all the synching for us
-390.3 -> 398.4
-Now you should see the steps changing
-every time I snap my fingers
-398.4 -> 403
-Some of you may have noticed that this
-looks similar to the layout of this talk
-403 -> 404.7
-the talk I'm giving right now
-404.7 -> 406.9
-and it is
 ```
 
 ---
 
-<Video src="speaker.webm" start={406.9} end={420} />
-<Browser url="/" zoom={0.4} />
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/14" zoom={0.35}></Browser>
 <Editor
-  code="cake.mdx"
-  focus="508:527"
+  code="14.js"
+  lang="jsx"
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/15" zoom={0.25}></Browser>
+<Editor
+  code="15.js"
+  lang="jsx"
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/15" zoom={0.25}></Browser>
+<Editor
+  code="16.js"
+  lang="jsx"
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/15" zoom={0.25}></Browser>
+<Editor
+  code="17.js"
+  lang="jsx"
+  tab="demo/embed.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/simple" loadUrl="/03" zoom={0.25}></Browser>
+<Editor
+  code="03.js"
+  focus="1:5"
+  lang="html"
+  tab="demo/simple.html"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/embed" loadUrl="/15" zoom={0.25}></Browser>
+<Editor
+  code="18.js"
+  lang="jsx"
+  tab="demo/embed-complete.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js","demo/embed-complete.js"]}
+/>
+
+```srt
+```
+
+---
+
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/the-end" loadUrl="/the-end" zoom={0.8}></Browser>
+<Editor
+  code="the-end.md"
   lang="md"
-  tab="demo/cake.mdx"
-  tabs={["demo/cake.mdx", "pages/index.js"]}
-/>
-
-```srt
-406.9 -> 409.5
-This talk was built using this same technique
-409.5 -> 413.7
-It's all MDX
-Always has been
-413.7 -> 420
-On the left you can see the mdx for
-this specific step of the talk
-```
-
----
-
-<Video src="speaker.webm" start={420} end={439.6} />
-<Browser url="/" zoom={0.4} />
-<Editor
-  code="cake.mdx"
-  focus="531:551"
-  lang="md"
-  tab="demo/cake.mdx"
-  tabs={["demo/cake.mdx", "pages/index.js"]}
-/>
-
-```srt
-420 -> 426
-And here is the next one
-We have four different elements for each step
-426 -> 432.5
-We have the video filename and timestamps
-the url we are showing on the iframe
-432.5 -> 439.6
-information for the code we are highlighting
-and even the captions for the step
-```
-
----
-
-<Video src="speaker.webm" start={439.6} end={484.1} />
-<Browser
-  url="https://codehike.org"
-  zoom={0.4}
-  prependOrigin={false}
-/>
-<Editor
-  code="package.json.copy"
-  focus="2:16"
-  lang="json"
-  tab="package.json"
-  tabs={["package.json"]}
+  tab="demo/embed-complete.js"
+  tabs={["demo/simple.html", "demo/embed-app.js", "demo/embed.js","demo/embed-complete.js"]}
 />
 
 ```srt

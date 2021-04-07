@@ -1,20 +1,7 @@
 import React, {useState, useEffect} from "react"
 import { LookerEmbedSDK } from "@looker/embed-sdk";
-import { ComponentsProvider, Heading, Span } from "@looker/components";
 
-
-export default function App() {
-  return (
-    <div id="App">
-      <ComponentsProvider>
-        <Heading>Looker Embed Demo</Heading>
-      </ComponentsProvider>
-    </div>
-  );
-}
-
-
-function Embed() {
+export default function Embed() {
   const [dashboardEmbedded, setDashboardEmbedded] = useState(false);
   useEffect(() => {
     createUrlAndEmbedDashboard();
@@ -23,7 +10,7 @@ function Embed() {
   let createUrlAndEmbedDashboard = async () => {
     const embed_url = await sdk.ok(
       sdk.create_embed_url_as_me({
-        target_url: `https://dat.dev.looker.com/embed/dashboards-next/19
+        target_url: `https://dat.dev.looker.com/embed/dashboards-next/8
         ?embed_domain=${document.location.origin}
         &sdk=2`
       })

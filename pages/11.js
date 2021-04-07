@@ -1,2 +1,2 @@
-import Page from "../demo/11"
+import Page from "../demo/10"
 export default Page

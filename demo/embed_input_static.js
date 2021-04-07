@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react"
 import { LookerEmbedSDK } from "@looker/embed-sdk";
 import {InputDateRange} from "@looker/components"
+
 import { SDK } from "./pblsession";
 
 
@@ -19,7 +20,7 @@ export function Embed() {
     let createUrlAndEmbedDashboard = async () => {
       const embed_url = await sdk.ok(
         sdk.create_embed_url_as_me({
-          target_url: `https://dat.dev.looker.com/embed/dashboards-next/8?embed_domain=${document.location.origin}&sdk=2`
+          target_url: `https://dat.dev.looker.com/embed/dashboards-next/1?embed_domain=${document.location.origin}&sdk=2`
         })
       );
 
@@ -33,9 +34,9 @@ export function Embed() {
           setDashboardEmbedded(true);
         });
     };
-    return (
+    return(
       <div id="EmbedContainer">
-      {/* <InputDateRange /> */}
-    </div>
+        <InputDateRange/>
+      </div>
     );
   }

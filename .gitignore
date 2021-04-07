@@ -4,3 +4,5 @@ todo.md
 dist
 yarn-error.log
 out
+*.mp4
+*.webm
